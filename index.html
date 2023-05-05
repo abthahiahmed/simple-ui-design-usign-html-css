@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple UI Design</title>
+
+    <style>
+        
+        *{
+            margin : 0px;
+            padding : 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html, body{
+            width : 100%;
+            height : 100%;
+            overflow: hidden;
+        }
+
+        body{
+            background-color : #003566; 
+            display : grid;
+            place-items : center;
+        }
+
+        .container{
+            max-width: 400px;
+            border-radius: 10px;
+            padding : 20px;
+            box-shadow: -10px -10px 30px -4px rgba(0, 0, 0, 0.1), 10px 10px 30px -4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            backdrop-filter: blur(40px);
+        }
+
+
+        .container img{
+            width : 200px;
+        }
+
+        .container h1{
+            font-size: 2rem;
+            font-weight: normal;
+            letter-spacing: 0.2rem;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container p{
+            color : white;
+            padding : 10px 0px;
+            line-height: 1.2rem;
+        }
+
+        .container a{
+            display : inline-block;
+            padding:  10px 20px;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            background: linear-gradient(white, #a7a7a7);
+            margin-top: 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-right : 10px;
+        }
+        .container a.main{
+            background : linear-gradient(#3a86ff, #4361ee);
+            color : white;
+        }
+
+
+        .circle{
+            position: absolute;
+            z-index: -1;
+            width : 200px;
+            aspect-ratio: 1/1;
+
+            background: linear-gradient(violet, #3a86ff);
+            border-radius: 50%;
+
+            animation: circle 5s infinite ease alternate;
+        }
+
+
+        @keyframes circle{
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="circle" style="top:10%;left: 55%;"></div>
+    <div class="circle" style="top:70%;left: 28%"></div>
+
+    <div class="container">
+        <img src="skooter.webp">
+        <h1>Fast Delivery Of Product</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <a href="javascript:void()" class="main">GET STARTED</a>
+        <a href="javascript:void()" >Learn More</a>
+    </div>
+
+</body>
+</html>
